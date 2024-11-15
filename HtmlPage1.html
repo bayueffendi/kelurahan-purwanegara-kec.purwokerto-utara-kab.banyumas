@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f8f9fa;
+            background-color: #f3f4f6; /* Light gray */
         }
 
         .container {
@@ -23,7 +23,7 @@
         }
 
         header {
-            background: linear-gradient(45deg, #ff6f61, #ff4e00);
+            background: linear-gradient(45deg, #1D3557, #457B9D); /* Deep blue gradient */
             color: white;
             padding: 50px 0;
             text-align: center;
@@ -40,24 +40,9 @@
                 margin-top: 15px;
             }
 
-        .btn-explore {
-            margin-top: 30px;
-            background-color: #ff4e00;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-            .btn-explore:hover {
-                background-color: #e04e00;
-            }
-
         /* Navigation */
         nav {
-            background-color: #343a40;
+            background-color: #2C3E50; /* Dark Blue */
             color: white;
             padding: 15px 0;
         }
@@ -87,40 +72,38 @@
                     }
 
                         nav .navigation li a:hover {
-                            color: #ff6f61;
+                            color: #FFD700; /* Yellow */
                         }
 
-        /* About Section */
-        .about {
-            padding: 50px 0;
-            background-color: white;
-        }
-
-            .about .about-title {
-                font-size: 2.5rem;
-                margin-bottom: 30px;
-                color: #ff6f61;
-            }
-
-        .about-desc p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: #333;
-        }
-
+        /* Map Section */
         .map {
             padding: 50px 0;
-            background-color: #f8f9fa;
+            background-color: #A8E6CF; /* Mint Green */
         }
 
             .map .title {
                 font-size: 2.5rem;
-                color: #ff6f61;
+                color: #1D3557;
                 margin-bottom: 20px;
             }
 
+        .map-container {
+            background-color: #FFFFFF; /* White */
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .map-container iframe {
+                width: 100%;
+                height: 500px;
+                border: 0;
+                border-radius: 10px;
+            }
+
+        /* Footer */
         .footer {
-            background-color: #343a40;
+            background-color: #2C3E50; /* Dark Blue */
             color: white;
             padding: 30px 0;
             text-align: center;
@@ -134,25 +117,13 @@
             }
 
                 .footer .social a:hover {
-                    color: #ff6f61;
+                    color: #FFD700; /* Yellow */
                 }
 
             .footer .credits {
                 margin-top: 20px;
                 font-size: 1rem;
-                color: #bbb;
-            }
-
-        /* Scroll Reveal */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-            .scroll-reveal.visible {
-                opacity: 1;
-                transform: translateY(0);
+                color: #BDC3C7; /* Light Gray */
             }
 
         /* Floating Action Button */
@@ -160,7 +131,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #ff4e00;
+            background-color: #457B9D; /* Soft Blue */
             color: white;
             border-radius: 50%;
             padding: 15px 20px;
@@ -171,7 +142,7 @@
         }
 
             .fab:hover {
-                background-color: #e04e00;
+                background-color: #1D3557; /* Darker Blue */
             }
 
         @media (max-width: 767px) {
@@ -202,77 +173,64 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <header id="home">
-        <div class="container">
-            <h1><strong>Kelurahan Purwokerto Utara</strong></h1>
-            <h4>"Maju Bersama, Purwokerto Utara untuk Masa Depan"</h4>
-            <button class="btn-explore">Explore more <i class="ri-arrow-right-line"></i></button>
-        </div>
-    </header>
+    <!-- Hero Section -->
+    <div class="hero-section" id="home">
+        <div class="container text-center">
+            <h1 class="display-6">Selamat Datang di Desa Purwanegara</h1>
+            <img src="https://th.bing.com/th/id/OIP.O-EZ9sj7jCdUgQmho4YtiwHaDT?w=337&h=156&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Desa Purwanegara" class="img-fluid rounded my-3">
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="scroll-reveal">
-                <h2 class="about-title">Sejarah Kelurahan Purwokerto Utara</h2>
-                <div class="about-desc">
-                    <p>Kelurahan Purwokerto Utara terletak di kecamatan Purwokerto Utara, Kabupaten Banyumas, Jawa Tengah. Sejarahnya yang panjang dimulai dari masa Kerajaan Mataram hingga masa kolonial Belanda dan Indonesia merdeka.</p>
-                    <h3>Sejarah Awal</h3>
-                    <p>Purwokerto Utara, bagian dari wilayah Banyumas, terpengaruh kuat oleh Kerajaan Mataram pada zaman Hindu-Buddha.</p>
-                    <h3>Masa Kolonial Belanda</h3>
-                    <p>Pada masa penjajahan Belanda, wilayah ini mengalami perubahan besar dalam hal infrastruktur dan sosial ekonomi.</p>
-                    <h3>Kemerdekaan dan Perkembangan</h3>
-                    <p>Setelah Indonesia merdeka, Purwokerto Utara berkembang pesat menjadi pusat kegiatan ekonomi dan budaya.</p>
+            <header id="home">
+                <div class="container text-center d-flex justify-content-between align-items-center">
+                    <h1><strong>Kecamatan Purwokerto Utara</strong></h1>
+                    <!-- Adjusted logo size -->
+                    <img src="https://static.banyumaskab.go.id/website/documents/purwanegara_purwokertoutara/.tmb/logo-jawa-tengah.png" alt="Logo Jawa Tengah" class="img-fluid" style="width: 100px; height: auto;">
+                    <h4>"Maju Bersama, desa purwanegara kec.Purwokerto Utara untuk Masa Depan"</h4>
+                </div>
+            </header>
+        </div>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <p class="lead">Desa Purwanegara terletak di Kecamatan Purwokerto Utara, Kabupaten Banyumas, Provinsi Jawa Tengah. Desa ini merupakan bagian dari wilayah Purwokerto yang terkenal dengan keindahan dan kekayaan budaya Banyumas.</p>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map" id="map">
+            <div class="container text-center">
+                <h1 class="title">Lokasi Kelurahan Purwanegara Kecamatan Purwokerto Utara</h1>
+                <p class="subtitle">Temukan Wilayah Purwanegara Kecamatan Purwokerto Utara!</p>
+                <div class="map-container">
+                    <iframe src="https://calm-profiterole-f38aed.netlify.app/" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Map Section -->
-    <section class="map" id="map">
-        <div class="container text-center">
-            <h1 class="title">Lokasi Kelurahan Purwokerto Utara</h1>
-            <p class="subtitle">Temukan Wilayah Purwokerto Utara!</p>
-            <div class="map-container">
-                <iframe src="https://extraordinary-cajeta-4c353c.netlify.app/" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <h4>Kelurahan Purwokerto Utara</h4>
+                <div class="social">
+                    <a href="https://www.instagram.com/kecpurwokertoutara" target="_blank"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://wa.me/6287834324980" target="_blank"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+                <p><i class="ri-double-quotes-l"></i> Bersama Membangun Purwokerto Utara yang Sejahtera dan Berbudaya. <i class="ri-double-quotes-r"></i></p>
+                <div class="credits">
+                    <p>Created by Bayueffendi, Mahasiswa Universitas Amikom Purwokerto</p>
+                </div>
             </div>
+        </footer>
+
+        <!-- Floating Action Button -->
+        <div class="fab" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <i class="ri-arrow-up-line"></i>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <h4>Kelurahan Purwokerto Utara</h4>
-            <div class="social">
-                <a href="https://www.instagram.com/kelurahanpurwokertoutara" target="_blank"><i class="ri-instagram-fill"></i></a>
-                <a href="https://wa.me/6287830023175" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-            </div>
-            <p><i class="ri-double-quotes-l"></i> Bersama Membangun Purwokerto Utara yang Sejahtera dan Berbudaya. <i class="ri-double-quotes-r"></i></p>
-            <div class="credits">
-                <p>Created by Bayueffendi, Mahasiswa Universitas Amikom Purwokerto, Jurusan Sistem Informasi</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Action Button -->
-    <div class="fab" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-        <i class="ri-arrow-up-line"></i>
-    </div>
-
-    <script>// Scroll Reveal Effect
-    document.addEventListener("DOMContentLoaded", function () {
-      let scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-      window.addEventListener('scroll', function () {
-        scrollRevealElements.forEach(function (element) {
-          let elementPosition = element.getBoundingClientRect().top;
-          let windowHeight = window.innerHeight;
-          if (elementPosition < windowHeight - 50) {
-            element.classList.add('visible');
-          }
-        });
-      });
-    });</script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            ScrollReveal().reveal('.scroll-reveal', { distance: '100px', origin: 'bottom', duration: 1500, delay: 200 });
+        </script>
 </body>
 
 </html>
